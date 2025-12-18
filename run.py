@@ -1,13 +1,10 @@
 from ultralytics import YOLO
 
-# Load model
-model = YOLO("yolo11n.pt")
+model = YOLO("runs/detect/train4/weights/best.pt")
 
-# Run inference
-results = model(
-    source="test.jpg",  # image / video / 0 for webcam
+model(
+    source="image.jpg",
+    conf=0.4,
     save=True,
-    conf=0.4
+    device=0
 )
-
-print("Inference completed")
