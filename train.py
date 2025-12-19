@@ -1,4 +1,5 @@
-from ultralytics import YOLO
+from ultralytics import YOLO  # type: ignore
+
 
 def main():
     # Load model
@@ -7,7 +8,7 @@ def main():
 # Train on your dataset
     model.train(
         data="data.yaml",
-        epochs=1,
+        epochs=40,
         imgsz=640,
         batch=16,
         device=0  # use GPU if available

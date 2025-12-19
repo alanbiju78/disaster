@@ -3,3 +3,4 @@ train/
 val/
 archive/
 venv/
+__pycache__/
